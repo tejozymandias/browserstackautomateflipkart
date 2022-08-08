@@ -2,9 +2,9 @@
 
 
 
-# clone repository and run npm install
+#### clone repository and run npm install
 
-# To run the Test, type the below command
+#### To run the Test, type the below command
 
 ### npx wdio run ./wdio.conf.js
 
