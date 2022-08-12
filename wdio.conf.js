@@ -1,9 +1,15 @@
 exports.config = {
-    //
+    
+    // BrowserStack Config
+
+    user:  'tejendragera_jxyXO4',
+    key:  '8HEGqQNjtAtNffaQjhxh',
+
+
     // ====================
     // Runner Configuration
     // ====================
-    //
+    runner:'local',
     //
     // ==================
     // Specify Test Files
@@ -57,7 +63,48 @@ exports.config = {
         maxInstances: 5,
         //
         browserName: 'chrome',
-        acceptInsecureCerts: true
+        browserVersion: '103.0',
+        'bstack:options': {
+            os: 'Windows',
+            osVersion: '11'
+        }
+        },
+        {
+            browserName: 'firefox',
+            browserVersion: '102.0',
+            'bstack:options': {
+                os: 'Windows',
+                osVersion: '10'
+            }
+        },
+        {
+            browserName: 'edge',
+            browserVersion: '103.0',
+            'bstack:options': {
+                os: 'OS X',
+                osVersion: 'Catalina'
+            }
+        },
+        {
+            browserName: 'safari',
+            browserVersion: '14.1',
+            'bstack:options': {
+                os: 'OS X',
+                osVersion: 'Big Sur'
+            }
+        },{
+            browserName: 'chrome',
+            browserVersion: '104.0',
+            'bstack:options': {
+                os: 'OS X',
+                osVersion: 'Catalina'
+            }
+        
+
+        
+  
+
+        // acceptInsecureCerts: true
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
@@ -110,7 +157,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver'],
+    services: ['browserstack'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
